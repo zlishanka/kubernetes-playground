@@ -7,14 +7,18 @@
 		need to install either docker desktop or virtual box
 
 ## Install minikube 
-    `curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64`
-    `sudo install minikube-darwin-amd64 /usr/local/bin/minikube` 
+    ```
+    curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
+    ```
+    ```
+    sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+    ``` 
    
     minikube has kubectl as dependency so no need to install kubectl separately
-
+    ```
     /usr/local/bin/minikube
     /usr/local/bin/kubectl
-
+    ```
     minikube cli    - for start up/deleting the cluster 
     kubectl cli     - for configuring the minicube cluster 
 
