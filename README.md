@@ -78,4 +78,27 @@ Playground of Kubernetes
             - Application data is not stored in etcd
 
              
-            -  
+### Example cluster set-up
+    - 2 masters, 3 worker nodes (compared to worker nodes, master nodes consume less resources) 
+    - Add new Master server/Node server
+        (1) get new bare server
+        (2) install all the master/worker node processes
+        (3) add it to the cluster 
+
+#### Minikube  
+    - Production Cluster setup includes multiple master and work nodes 
+    - Open source "Minikube" where Master and Node processes run on One machine 
+    - docker container is preinstalled
+    - on laptop or local machine, minicube creates Virtual Box 
+    - node runs in that virtual box, 1 Node K8s cluster 
+    - for testing purposes
+
+####  Kubectl
+    - command line tool for K8s cluster 
+    - ways to connect Api Server - UI, API, CLI (kubectl) 
+    - kubectl is the most powerful of 3 clients 
+        - create/destroy pods 
+        - create services
+    - kubectl works for both minikube and actual cloud cluster 
+     
+             
