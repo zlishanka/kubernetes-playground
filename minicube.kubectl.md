@@ -1,10 +1,11 @@
 # Installation and create minikube cluster 
+## Sources
 
-	kubectl - https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/
-	minikube - https://minikube.sigs.k8s.io/docs/start/	
+["kubectl"](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos)
+["minikube"](https://minikube.sigs.k8s.io/docs/start/)	
 
-	prerequisite: 
-		need to install either docker desktop or virtual box
+## prerequisite
+need to install either docker desktop or virtual box
 
 ## Install minikube 
 
