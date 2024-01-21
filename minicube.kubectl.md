@@ -1,27 +1,24 @@
 # Installation and create minikube cluster 
 ## Sources
+[minikube](https://minikube.sigs.k8s.io/docs/start/) cli - for start up/deleting the cluster 
 
-["kubectl"](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos)
-["minikube"](https://minikube.sigs.k8s.io/docs/start/)	
+[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos) cli - for configuring the minicube cluster 
 
 ## prerequisite
 need to install either docker desktop or virtual box
 
-## Install minikube 
-
+## minikube 
+### dependency
+minikube has kubectl as dependency so NO need to install kubectl separately
+/usr/local/bin/minikube
+/usr/local/bin/kubectl
+### installation
 ```
     curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
     sudo install minikube-darwin-amd64 /usr/local/bin/minikube
 ``` 
    
-    minikube has kubectl as dependency so NO need to install kubectl separately
-    /usr/local/bin/minikube
-    /usr/local/bin/kubectl
-
-    minikube cli    - for start up/deleting the cluster 
-    kubectl cli     - for configuring the minicube cluster 
-
-## Start minikube 
+### Start minikube 
 ```
 minikube start
 ```
@@ -36,25 +33,28 @@ Verifying Kubernetes components...
   	Enabled addons: storage-provisioner, default-storageclass
   	Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
 
-## Verify kubectl configuration
+## kubectl
+### Verify kubectl configuration
 ```
 kubectl version --short
 kubectl cluster-info		
 kubectl cluster-info dump
 ```	
 
-## Interact with your cluster
+### Interact with your cluster
 ```
 kubectl get po -A
 ```
     
-## CRUD commands
-    Deployment - abstraction over Pods
+### CRUD commands of deployment 
+    Deployment 
+    	- abstraction over Pods
         - blueprint for creating pods
         - most basic configuration for deployment (name and image to use)
         - rest defaults 
 
-    replicaset - managing the replicas of the pod 
+    replicaset 
+    	- managing the replicas of the pod 
 
     layers of abstraction 
         Deployment --> ReplicaSet --> Pod --> Container
