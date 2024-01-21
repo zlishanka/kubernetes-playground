@@ -8,24 +8,26 @@
 
 ## Install minikube 
 
-    ```
+```
     curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
-    ```
+```
     
-    ```
+```
     sudo install minikube-darwin-amd64 /usr/local/bin/minikube
-    ``` 
+``` 
    
     minikube has kubectl as dependency so no need to install kubectl separately
-    ```
+```
     /usr/local/bin/minikube
     /usr/local/bin/kubectl
-    ```
+```
     minikube cli    - for start up/deleting the cluster 
     kubectl cli     - for configuring the minicube cluster 
 
 ## Start minikube 
-	`minikube start`
+```
+	minikube start
+```
 
 	Creating docker container (CPUs=2, Memory=4000MB) ..	
 	Preparing Kubernetes v1.28.3 on Docker 24.0.7 ...
@@ -39,12 +41,16 @@
   	Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
 
 ## Verify kubectl configuration
-	`kubectl version --short`
-    `kubectl cluster-info`		
-    `kubectl cluster-info dump`	
+```
+kubectl version --short
+kubectl cluster-info		
+kubectl cluster-info dump
+```	
 
 ## Interact with your cluster
-    `kubectl get po -A` 
+```
+kubectl get po -A
+```
     
 ## CRUD commands
     Deployment - abstraction over Pods
