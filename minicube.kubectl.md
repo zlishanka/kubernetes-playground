@@ -2,7 +2,7 @@
 ## Sources
 [minikube](https://minikube.sigs.k8s.io/docs/start/) cli - for start up/deleting the cluster 
 
-[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos) cli - for configuring the minicube cluster 
+[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos) cli - for configuring the minikube cluster 
 
 ## prerequisite
 need to install either docker desktop or virtual box
@@ -70,10 +70,11 @@ kubectl get po -A
         kubectl create deployment nginx-depl --image=nginx
         kubectl create deployment mongo-depl --image=mongo
 ```
-### edit the configuration of deployment 
+### edit/get the configuration of deployment 
 ```
         kubectl edit deployment nginx-depl
-```
+        kubectl get deployment nginx-deployment -o yaml > nginx-deployment.yaml
+ ```
    
 ### delete the deployment
 ```
