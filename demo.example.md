@@ -49,14 +49,20 @@
 ```
      
 ### environment variables,  check on mongo docker image online
- 
+
+  mongodb:  
     MONGO_INITDB_ROOT_USERNAME, 
     MONGO_INITDB_ROOT_PASSWORD
-
     port - 27017
 
     echo -n 'username' | base64
     echo -n 'password' | base64
+
+  mongodb-express:
+    ME_CONFIG_MONGODB_ADMINUSERNAME
+    ME_CONFIG_MONGODB_ADMINPASSWORD
+    ME_CONFIG_MONGODB_SERVER
+    port: 8081
 
 ### Secret creation, mongo-secret.yaml (example, no secret here at all)
 
