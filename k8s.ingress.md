@@ -42,11 +42,22 @@
 ### Multiple paths for same host (routing)
     - example: google domain has many services
     - in "Ingress" yaml file
-    - http://myapp.com/analytics  --> analytics service --> analytics pod
-                      /shopping   --> shopping service  --> shoppig pod
+    - http://myapp.com/analytics  --> analytics service, 3000   --> analytics pod
+                      /shopping   --> shopping service, 8080    --> shoppig pod
 
 ### Multiple sub-domains or domains
     - instead one host and multiple path, multiple hosts with one path 
     - multiple sub-domains
     - analytics.myapp.com,
     - shopping.myapp.com 
+
+### Configuring TSL certificate
+    - spec to specify tls, hosts to include secretName: my-app-secret-tls 
+    - apiVersion: v1
+      kind: Secret
+      metadata: 
+        name:myapp-secret-tls
+      data:
+        tls.crt: base64 encoded crt
+        tls.key: base64 encoded key
+     

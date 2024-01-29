@@ -62,4 +62,4 @@
     change active namespace (brew install kubectx) 
 ```
     kubens my-namespace
-```  
+``` 
