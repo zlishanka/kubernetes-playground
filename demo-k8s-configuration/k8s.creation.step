@@ -1,0 +1,26 @@
+# Creation steps of demo k8s
+
+	## Create MongoDB deployment
+		mongo.yaml - specify the replicaset, mongodb username, password as secret
+		mongo-secret.yaml - 
+	## Apply secret
+		kubectl apply -f mongo-secret.yaml
+
+	## Refer secret in mongoDB deployment
+		spec --> containers --> env --> name (MONGO_INITDB_ROOT_USERNAME, MONGO_INITDB_ROOT_PASSWORD)
+	
+	## Apply MongoDB deployment
+		kubectl apply -f mongo.yaml
+
+	## Add service configuration in mongo.yaml (Internal service mongodb-service, configuration can be in the same yaml file)
+		kubectl apply -f mongo.yaml	
+
+	## Add configMap for mongodb-express 
+		kubectl apply -f mongo-configmap.yaml
+
+	## Add external service deployment (mongdb-express)
+		kubectl apply -f mongo-configmap.yaml
+
+	## assign external service to a public IP address
+		minikube service mongo-express-service		
+		default mongo-express - admin/pass			
